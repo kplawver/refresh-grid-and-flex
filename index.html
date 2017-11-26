@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Refresh Savannah: CSS Flexbox &amp; Grid</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    <meta charset="utf-8"/>
+  </head>
+  <body class="change-grid-order">
+    <header id="body-header">
+      <h1>Refresh Savannah: CSS Flexbox &amp; Grid</h1>
+      <nav>
+        <ul>
+          <li><a href="#step-one">Step One</a></li>
+          <li><a href="#step-two">Step Two</a></li>
+          <li><a href="#step-three">Step Three</a></li>
+          <li><a href="#step-four">Step Four</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="step-one">
+        <header>
+          <h2>Step One: Flexbox</h2>
+        </header>
+        <article>
+          <p>Let's start with something fairly simple: wrapping flex items so they don't look awful, like in, say, a photo gallery:</p>
+          <div id="photo-array">
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/animals/grayscale" alt="a kitten"/>
+              <p class="caption">Hello, I am some kind of animal photo from placeimg.com.  Who knows what will show up?</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/nature/grayscale" alt="a kitten"/>
+              <p class="caption">Yo! I am some kind of nature photo from placeimg.com.  I might be the same as all the other photos on the page. Who knows?</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/animals/grayscale?random=1" alt="a kitten"/>
+              <p class="caption">G'day! I'm some kind of animal photo. I might not be that different from the other ones on the page. I could be. Who knows?</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/nature/grayscale?random=1" alt="a kitten"/>
+              <p class="caption">Ummm, I don't know, but I might be different?  Maybe not?</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/animals/grayscale?random=2" alt="a kitten"/>
+              <p class="caption">There's a good chance, I'm something other than the other animal photos on the page. Am I cute?  <em>Please</em> tell me I'm cute!</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/nature/grayscale?random=3" alt="a kitten"/>
+              <p class="caption">Am I a landscape?  Seascape?  Who knows!  The randomness is killing me!</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/animals/grayscale?random=4" alt="a kitten"/>
+              <p class="caption">I'm hopefully not a scaly animal. Or, maybe that's alright.  Fur might be overrated.</p>
+            </div>
+            <div class="photo">
+              <img src="http://placeimg.com/800/400/nature/grayscale?random=5" alt="a kitten"/>
+              <p class="caption">Can a landscape be glum?  Who knows?  Am I a hill? Some trees? A desert?</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="step-two">
+        <header>
+          <h2>Step Two: Flexbox Form Example</h2>
+        </header>
+        <article>
+          <p>Let's lay out a form. It's one of the things we have to do most often in web development, and one of the least fun.  So, let's make this not so awful!  We'll be using the bootstrap form group convention because... it's what I use most often.</p>
+          <form action="#">
+            <div class="form-group">
+              <label for="first-name">
+                First Name
+              </label>
+              <input type="text" id="first-name" name="first_name"/>
+            </div>
+            <div class="form-group">
+              <label for="last-name">
+                Last Name
+              </label>
+              <input type="text" id="last-name" name="last_name"/>
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <select id="title" name="title">
+                <option value="">Choose One:</option>
+                <option>Commander</option>
+                <option>Bombadier</option>
+                <option>Dragon</option>
+                <option>Junior Awesomeness Consultant</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Describe your perfect sandwich</label>
+              <textarea id="description" name="description" rows="5"></textarea>
+            </div>
+          </form>
+        </article>
+      </section>
+      <section id="step-three">
+        <header>
+          <h2>Step Three: Grid</h2>
+        </header>
+        <article>
+          <p>Now we're just going to play around with moving things around in a grid.  Get ready for some wackiness!</p>
+          <p>All this does is add a class to the body that changes the grid settings. Be sure to look at the stylesheet associated with this page to see the different classes and their grid settings.</p>
+          <nav id="grid-switcher-container">
+            <ul>
+              <li><button data-class="" disabled>Back to Default</button></li>
+              <li><button data-class="two-columns" disabled>Two Content Columns</button></li>
+              <li><button data-class="old-school-left-nav" disabled>Old School Left Nav</button></li>
+              <li><button data-class="change-grid-order" disabled>Changing Grid Order</button></li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+      <section id="step-four">
+        <header>
+          <h2>Step Four: Responsive Grid</h2>
+        </header>
+        <article>
+          <p>There's not much use in having all this power if we're stuck with a desktop grid when we have to support a bunch of different screen sizes, so, let's make this thing responsive!  Go back to <a href="#step-three">step 3</a> and click the "Changing Grid Order" button, then start resizing the browser! There should be two breakpoints: 750px wide and 325px wide.  You can either use the mobile view thing in your browser or just resize your browser and see what happens.</p>
+        </article>
+      </section>
+    </main>
+    <footer id="body-footer">
+      <nav>
+        <ul>
+          <li><a href="#body-header">Back to top</a></li>
+          <li><a href="#step-one">Step One</a></li>
+          <li><a href="#step-two">Step Two</a></li>
+          <li><a href="#step-three">Step Three</a></li>
+          <li><a href="#step-four">Step Four</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="text/javascript" src="scripts/application.js" async="async"></script>
+  </body>
+</html>

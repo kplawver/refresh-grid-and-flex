@@ -54,7 +54,7 @@ header#body-header {
 }
 
 section {
-  margin: 10px 50px;
+  margin: 10px 50px 50px;
   padding: 10px;
 
   h2 {
@@ -76,6 +76,12 @@ section#step-one {
 
     flex-wrap: wrap;
 
+    // Try changing the flex: line below to:
+    // flex: 1 1 auto;
+    // or
+    // flex: 0 0 50%;
+    // and then put it back to:
+    // flex: 0 0 29%;
     .photo {
       flex: 0 0 29%;
       margin: 1% 1% 10px;
@@ -183,6 +189,58 @@ section#step-three {
         }
 
       }
+    }
+  }
+}
+
+section#step-five {
+  #resource-links {
+    display: flex;
+    justify-content: flex-start;
+
+    aside {
+      flex: 1;
+      border: solid 1px #ccc;
+
+      &:first-child {
+        border-right: none;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 10px;
+        background: #ccc;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          border-bottom: solid 1px #ccc;
+          &:last-child {
+            border-bottom: none;
+          }
+
+          a {
+            display: block;
+            padding: 10px;
+            margin: 0;
+            text-decoration: none;
+            color: #369;
+
+            &:hover, &:active {
+              color: #ccc;
+              background: #369;
+            }
+
+          }
+
+        }
+
+      }
+
     }
   }
 }

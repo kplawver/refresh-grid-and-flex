@@ -41,7 +41,7 @@ header#body-header {
             color: #369; }
 
 section {
-  margin: 10px 50px;
+  margin: 10px 50px 50px;
   padding: 10px; }
   section h2 {
     margin: 0;
@@ -124,6 +124,36 @@ section#step-three nav#grid-switcher-container ul {
       section#step-three nav#grid-switcher-container ul li button:hover, section#step-three nav#grid-switcher-container ul li button:active {
         background: #036;
         cursor: pointer; }
+
+section#step-five #resource-links {
+  display: flex;
+  justify-content: flex-start; }
+  section#step-five #resource-links aside {
+    flex: 1;
+    border: solid 1px #ccc; }
+    section#step-five #resource-links aside:first-child {
+      border-right: none; }
+    section#step-five #resource-links aside h3 {
+      margin: 0;
+      padding: 10px;
+      background: #ccc; }
+    section#step-five #resource-links aside ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      section#step-five #resource-links aside ul li {
+        border-bottom: solid 1px #ccc; }
+        section#step-five #resource-links aside ul li:last-child {
+          border-bottom: none; }
+        section#step-five #resource-links aside ul li a {
+          display: block;
+          padding: 10px;
+          margin: 0;
+          text-decoration: none;
+          color: #369; }
+          section#step-five #resource-links aside ul li a:hover, section#step-five #resource-links aside ul li a:active {
+            color: #ccc;
+            background: #369; }
 
 footer#body-footer {
   background: #444; }

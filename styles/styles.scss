@@ -102,6 +102,8 @@ section#step-one {
       }
     }
 
+    // And this is how we make things responsive!  Cool, right?
+
     @media (max-width: 1024px) {
       .photo {
         flex: 0 0 45%;
@@ -294,10 +296,13 @@ body.old-school-left-nav, body.change-grid-order {
 
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
+  // This was really confusing for me. Each ROW in your template areas property is
+  // a new quoted string, WITH NO COMMA between the row strings.
+  // Yeah, took me many minutes to figure this one out.
   grid-template-areas: "sd sd mn mn mn mn mn mn mn"
   "ft ft ft ft ft ft ft ft ft";
 
-
+  // Never seen the > selector?  It's a direct child selector!
   & > header#body-header {
     grid-area: sd;
     display: block;
@@ -319,6 +324,8 @@ body.old-school-left-nav, body.change-grid-order {
     }
   }
 
+  // grid-area assigns an element to a specific grid area from, you guessed it,
+  // the grid-template-areas property!
   & > main {
     grid-area: mn;
   }
